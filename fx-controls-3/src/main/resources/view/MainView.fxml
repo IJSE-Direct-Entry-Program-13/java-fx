@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="335.0" prefWidth="615.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ScrollPane layoutX="10.0" layoutY="42.0" prefHeight="282.0" prefWidth="595.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="42.0">
+         <content>
+            <VBox>
+               <children>
+                  <HBox alignment="CENTER_LEFT" prefHeight="43.0" prefWidth="580.0">
+                     <children>
+                        <Label minWidth="-Infinity" prefHeight="18.0" prefWidth="109.0" text="ID: ">
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                        </Label>
+                        <TextField minWidth="200.0" HBox.hgrow="ALWAYS" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="10.0" prefHeight="43.0" prefWidth="580.0">
+                     <children>
+                        <Label minWidth="-Infinity" prefHeight="18.0" prefWidth="109.0" text="NAME: ">
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                        </Label>
+                        <TextField minWidth="200.0" HBox.hgrow="ALWAYS" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="53.0" prefHeight="43.0" prefWidth="580.0">
+                     <children>
+                        <Label minWidth="-Infinity" prefHeight="18.0" prefWidth="109.0" text="ADDRESS: ">
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                        </Label>
+                        <TextField minWidth="200.0" HBox.hgrow="ALWAYS" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="96.0" prefHeight="43.0" prefWidth="580.0">
+                     <children>
+                        <Label minWidth="-Infinity" prefHeight="18.0" prefWidth="109.0" text="CONTACT 1: ">
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                        </Label>
+                        <TextField minWidth="200.0" HBox.hgrow="ALWAYS" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="139.0" prefHeight="43.0" prefWidth="580.0">
+                     <children>
+                        <Label minWidth="-Infinity" prefHeight="18.0" prefWidth="109.0" text="CONTACT 2:">
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                        </Label>
+                        <TextField minWidth="200.0" HBox.hgrow="ALWAYS" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="182.0" prefHeight="43.0" prefWidth="580.0">
+                     <children>
+                        <Label minWidth="-Infinity" prefHeight="18.0" prefWidth="109.0" text="CONTACT 3:">
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                        </Label>
+                        <TextField minWidth="200.0" HBox.hgrow="ALWAYS" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </content>
+      </ScrollPane>
+      <Label alignment="CENTER" layoutX="198.0" layoutY="14.0" style="-fx-background-color: lightblue; -fx-text-fill: black;" text="Welcome to Java FX" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" />
+   </children>
+</AnchorPane>

@@ -10,7 +10,7 @@
 
 <AnchorPane prefHeight="400.0" prefWidth="688.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.dep13.fx.controller.MainSceneController">
    <children>
-      <Label fx:id="lblPreview" layoutX="202.0" layoutY="227.0" text="Java FX Transitions">
+      <Label fx:id="lblPreview" layoutX="202.0" layoutY="242.0" text="Java FX Transitions">
          <font>
             <Font name="System Bold" size="30.0" />
          </font>
@@ -45,6 +45,20 @@
                      </font>
                   </Button>
                   <Button fx:id="btnRotate" layoutX="334.0" layoutY="10.0" mnemonicParsing="false" onAction="#btnRotateOnAction" prefWidth="150.0" text="Rotate">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="5.0">
+               <children>
+                  <Button fx:id="btnFadeIn" mnemonicParsing="false" onAction="#btnFadeInOnAction" prefWidth="150.0" text="Fade In">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnFadeOut" mnemonicParsing="false" onAction="#btnFadeOutOnAction" prefWidth="150.0" text="Fade Out">
                      <font>
                         <Font size="19.0" />
                      </font>

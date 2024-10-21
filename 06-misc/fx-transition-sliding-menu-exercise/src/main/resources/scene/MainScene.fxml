@@ -10,7 +10,7 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="root" onMouseClicked="#rootOnMouseClicked" prefHeight="468.0" prefWidth="600.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.dep13.fx.controller.MainSceneController">
+<AnchorPane fx:id="root" focusTraversable="true" onKeyPressed="#rootOnKeyPressed" onMouseClicked="#rootOnMouseClicked" prefHeight="468.0" prefWidth="600.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.dep13.fx.controller.MainSceneController">
    <children>
       <ImageView fx:id="imgMenu" fitHeight="37.0" fitWidth="39.0" layoutX="22.0" layoutY="21.0" onMouseClicked="#imgMenuOnMouseClicked" pickOnBounds="true" preserveRatio="true">
          <image>

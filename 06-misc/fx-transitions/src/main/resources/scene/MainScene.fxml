@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="688.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.dep13.fx.controller.MainSceneController">
+   <children>
+      <Label fx:id="lblPreview" layoutX="202.0" layoutY="227.0" text="Java FX Transitions">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+      </Label>
+      <VBox alignment="TOP_CENTER" layoutX="5.0" layoutY="14.0" prefHeight="106.0" prefWidth="637.0" spacing="15.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0">
+         <children>
+            <Button fx:id="btnReset" mnemonicParsing="false" onAction="#btnResetOnAction" prefWidth="150.0" text="Reset">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Button>
+            <HBox alignment="TOP_CENTER" prefHeight="48.0" prefWidth="552.0" spacing="5.0">
+               <children>
+                  <Button fx:id="btnTranslateX" mnemonicParsing="false" onAction="#btnTranslateXOnAction" prefWidth="150.0" text="TranslateX">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnTranslateY" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#btnTranslateYOnAction" prefWidth="150.0" text="TranslateY">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnScaleX" layoutX="131.0" layoutY="10.0" mnemonicParsing="false" onAction="#btnScaleXOnAction" prefWidth="150.0" text="ScaleX">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnScaleY" layoutX="251.0" layoutY="10.0" mnemonicParsing="false" onAction="#btnScaleYOnAction" prefWidth="150.0" text="ScaleY">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnRotate" layoutX="334.0" layoutY="10.0" mnemonicParsing="false" onAction="#btnRotateOnAction" prefWidth="150.0" text="Rotate">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

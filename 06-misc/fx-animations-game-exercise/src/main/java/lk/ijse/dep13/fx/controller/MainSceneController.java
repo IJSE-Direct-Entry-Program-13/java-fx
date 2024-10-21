@@ -17,6 +17,7 @@ public class MainSceneController {
     int t = 0;
     int imageIndex = 1;
     int dx = 0;
+    boolean jump = false;
 
     public void initialize() throws InterruptedException {
 //        while (character.getLayoutY() < root.getPrefHeight() - ground.getHeight() - character.getHeight()){
@@ -35,11 +36,14 @@ public class MainSceneController {
             }
             if (dx != 0) {
                 character.setLayoutX(character.getLayoutX() + dx);
-//                character.setImage(new Image("/image/run/Run (%d).png".formatted(imageIndex++)));
-//                if (imageIndex > 8) imageIndex = 1;
+                character.setImage(new Image("/image/run/Run (%d).png".formatted(imageIndex++)));
+                if (imageIndex > 8) imageIndex = 1;
             } else {
                 character.setImage(new Image("/image/idle/Idle (%d).png".formatted(imageIndex++)));
                 if (imageIndex > 10) imageIndex = 1;
+            }
+            if (jump){
+
             }
         });
         Timeline tl = new Timeline(keyFrame1);
@@ -51,19 +55,20 @@ public class MainSceneController {
     public void rootOnKeyPressed(KeyEvent keyEvent) {
         if (keyEvent.getCode() == KeyCode.SPACE) {
             character.setLayoutY(character.getLayoutY() - 175);
+            jump = true;
         } else if (keyEvent.getCode() == KeyCode.LEFT) {
-            //if (dx == 0) imageIndex = 1;
+            if (dx == 0) imageIndex = 1;
             dx = -10;
         } else if (keyEvent.getCode() == KeyCode.RIGHT) {
-            //if (dx == 0) imageIndex = 1;
+            if (dx == 0) imageIndex = 1;
             dx = 10;
         }
     }
 
     public void rootOnKeyReleased(KeyEvent keyEvent) {
         if (keyEvent.getCode() == KeyCode.LEFT || keyEvent.getCode() == KeyCode.RIGHT) {
-            //imageIndex = 1;
+            imageIndex = 1;
             dx = 0;
-        }
+        }else if (keyEvent.getCode() ==KeyCode.SPACE) jump = false;
     }
 }

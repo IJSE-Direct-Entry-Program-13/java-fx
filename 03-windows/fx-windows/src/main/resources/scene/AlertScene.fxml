@@ -16,12 +16,12 @@
                   <Font size="20.0" />
                </font>
             </Button>
-            <Button fx:id="btnCustomizedAlert" mnemonicParsing="false" onAction="#btnCustomizedAlertOnAction" prefWidth="250.0" text="Customized Alert">
+            <Button fx:id="btnConfirmationAlert" mnemonicParsing="false" onAction="#btnConfirmationAlertOnAction" prefWidth="250.0" text="Confirmation Alert">
                <font>
                   <Font size="20.0" />
                </font>
             </Button>
-            <Button fx:id="btnConfirmationAlert" mnemonicParsing="false" onAction="#btnConfirmationAlertOnAction" prefWidth="250.0" text="Confirmation Alert">
+            <Button fx:id="btnCustomizedAlert" mnemonicParsing="false" onAction="#btnCustomizedAlertOnAction" prefWidth="250.0" text="Customized Alert">
                <font>
                   <Font size="20.0" />
                </font>

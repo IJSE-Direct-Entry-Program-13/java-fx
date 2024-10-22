@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane fx:id="root" prefHeight="230.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.dep13.fx.controller.ChooserSceneController">
+   <children>
+      <VBox alignment="CENTER" layoutX="199.0" layoutY="63.0" spacing="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="65.0">
+         <children>
+            <Button fx:id="btnSaveFileDialog" maxHeight="1.7976931348623157E308" mnemonicParsing="false" onAction="#btnSaveFileDialogOnAction" prefWidth="300.0" text="Save File Dialog Box">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnOpenFileDialog" maxHeight="1.7976931348623157E308" mnemonicParsing="false" onAction="#btnOpenFileDialogOnAction" prefWidth="300.0" text="Open File Dialog Box">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnOpenDirectoryDialog" maxHeight="1.7976931348623157E308" mnemonicParsing="false" onAction="#btnOpenDirectoryDialogOnAction" prefWidth="300.0" text="Open Directory Dialog Box">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Button>
+         </children>
+      </VBox>
+      <Label alignment="CENTER" layoutX="10.0" layoutY="14.0" text="FX Choosers" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+         <font>
+            <Font name="System Bold" size="28.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

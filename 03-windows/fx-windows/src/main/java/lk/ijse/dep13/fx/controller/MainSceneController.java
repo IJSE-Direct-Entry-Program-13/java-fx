@@ -7,6 +7,7 @@ import javafx.scene.control.Button;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Background;
 import javafx.scene.paint.Color;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
@@ -76,12 +77,22 @@ public class MainSceneController {
         stage.show();
     }
 
-    public void btnAlertsOnAction(ActionEvent event) {
-
+    public void btnFileDirectoryChooserOnAction(ActionEvent event) throws IOException {
+        Stage stage = new Stage();
+        stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/scene/ChooserScene.fxml"))));
+        stage.setTitle("File|Directory Chooser");
+        stage.initModality(Modality.APPLICATION_MODAL);
+        stage.show();
     }
 
-    public void btnFileDirectoryChooserOnAction(ActionEvent event) {
-
+    public void btnAlertsOnAction(ActionEvent event) throws IOException {
+        Stage stage = new Stage();
+        stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/scene/AlertScene.fxml"))));
+        stage.setTitle("Alerts");
+        stage.initModality(Modality.APPLICATION_MODAL);
+        stage.show();
     }
+
+
 
 }

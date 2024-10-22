@@ -1,6 +1,7 @@
 package lk.ijse.dep13.fx;
 
 import javafx.application.Application;
+import javafx.application.Platform;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
@@ -23,6 +24,6 @@ public class AppInitializer extends Application {
         primaryStage.setResizable(false);
         primaryStage.setTitle("JavaFX Animations: Game Exercise");
         primaryStage.show();
-        primaryStage.centerOnScreen();
+        Platform.runLater(primaryStage::centerOnScreen);
     }
 }

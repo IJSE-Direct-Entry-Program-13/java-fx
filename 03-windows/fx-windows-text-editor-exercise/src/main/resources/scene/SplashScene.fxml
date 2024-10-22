@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" prefHeight="393.0" prefWidth="510.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.dep13.fx.controller.SplashSceneController">
+   <children>
+      <Rectangle arcHeight="50.0" arcWidth="50.0" fill="WHITE" height="296.0" layoutX="27.0" layoutY="36.0" stroke="#ebeaea" strokeType="INSIDE" width="467.0">
+         <effect>
+            <DropShadow height="59.55" radius="28.5325" spread="0.11" width="56.58">
+               <color>
+                  <Color opacity="0.24137930572032928" />
+               </color>
+            </DropShadow>
+         </effect>
+      </Rectangle>
+      <ImageView fitHeight="405.0" fitWidth="584.0" layoutX="-13.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/splash-bg.png" />
+         </image>
+      </ImageView>
+      <AnchorPane layoutX="200.0" layoutY="69.0" prefHeight="114.0" prefWidth="277.0" style="-fx-background-color: rgba(255,255,255,0.9); -fx-background-radius: 10px;">
+         <children>
+            <ProgressBar fx:id="prg" layoutX="14.0" layoutY="80.0" prefHeight="20.0" prefWidth="252.0" progress="0.29" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" />
+            <Label fx:id="lblStatus" layoutX="14.0" layoutY="57.0" prefHeight="21.0" prefWidth="219.0" text="Loading" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="8.0">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblProgress" layoutX="230.0" layoutY="66.0" text="50%" AnchorPane.bottomAnchor="30.0" AnchorPane.rightAnchor="5.0">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label alignment="TOP_LEFT" layoutX="5.0" layoutY="6.0" text="DEP TEXT EDITOR" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0">
+               <font>
+                  <Font name="System Bold" size="21.0" />
+               </font>
+            </Label>
+            <Label layoutX="8.0" layoutY="37.0" text="Copyright © 2024 DEP-13. All Rights Reserved.">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

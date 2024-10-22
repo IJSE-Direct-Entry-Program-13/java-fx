@@ -1,6 +1,7 @@
 package lk.ijse.dep13.fx.controller;
 
 import javafx.animation.TranslateTransition;
+import javafx.application.Platform;
 import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyCode;
@@ -21,6 +22,17 @@ public class MainSceneController {
 
     public void initialize() {
         mainMenu.setTranslateX(-mainMenu.getPrefWidth() - 2);
+
+        Platform.runLater(()->{
+            System.out.println("Initialized");
+            System.out.println(mainMenu.getWidth());
+            System.out.println(mainMenu.getHeight());
+        });
+
+        System.out.println("Initializing");
+        // You can't obtain dimensions of a control here since the UI is still being initialized
+        System.out.println(mainMenu.getWidth());
+        System.out.println(mainMenu.getHeight());
     }
 
     public void imgMenuOnMouseClicked(MouseEvent event) {

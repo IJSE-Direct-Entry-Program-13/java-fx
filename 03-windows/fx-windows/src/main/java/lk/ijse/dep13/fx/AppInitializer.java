@@ -3,6 +3,7 @@ package lk.ijse.dep13.fx;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -15,9 +16,9 @@ public class AppInitializer extends Application {
 
     @Override
     public void start(Stage primaryStage) throws IOException {
-        primaryStage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/scene/MainScene.fxml"))));
-        primaryStage.setTitle("Java FX Animations");
-        primaryStage.setResizable(false);
+        AnchorPane container = FXMLLoader.load(getClass().getResource("/scene/MainScene.fxml"));
+        primaryStage.setScene(new Scene(container));
+        primaryStage.setTitle("FX Windows (Stages)");
         primaryStage.show();
         primaryStage.centerOnScreen();
     }

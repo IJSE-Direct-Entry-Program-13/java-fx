@@ -1,14 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="scene.MainScene"
-            prefHeight="400.0" prefWidth="600.0" >
 
+<AnchorPane prefHeight="363.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.dep13.fx.controller.MainSceneController">
+   <children>
+      <Label fx:id="lblPreview" layoutX="184.0" layoutY="164.0" text="FX Animations">
+         <font>
+            <Font name="System Bold" size="32.0" />
+         </font>
+      </Label>
+      <HBox alignment="CENTER" layoutX="226.0" layoutY="30.0" spacing="5.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <Button fx:id="btnStart" mnemonicParsing="false" onAction="#btnStartOnAction" prefWidth="75.0" text="START">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnStop" mnemonicParsing="false" onAction="#btnStopOnAction" prefWidth="75.0" text="STOP">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+         </children>
+      </HBox>
+   </children>
 </AnchorPane>

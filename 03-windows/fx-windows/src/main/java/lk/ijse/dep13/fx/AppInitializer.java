@@ -5,6 +5,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 import java.io.IOException;
 
@@ -16,6 +17,7 @@ public class AppInitializer extends Application {
 
     @Override
     public void start(Stage primaryStage) throws IOException {
+        // primaryStage.initStyle(StageStyle.TRANSPARENT);
         AnchorPane container = FXMLLoader.load(getClass().getResource("/scene/MainScene.fxml"));
         primaryStage.setScene(new Scene(container));
         primaryStage.setTitle("FX Windows (Stages)");

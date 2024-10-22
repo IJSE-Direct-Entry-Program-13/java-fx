@@ -1,7 +1,6 @@
 package lk.ijse.dep13.fx.controller;
 
 import javafx.event.ActionEvent;
-import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -23,6 +22,7 @@ public class MainSceneController {
     public Button btnUndecoratedWindow;
     public Button btnUtilityWindow;
     public AnchorPane root;
+
 
     public void btnNewWindowOnAction(ActionEvent event) throws IOException {
         //Stage stage = new Stage(StageStyle.DECORATED);
@@ -65,8 +65,15 @@ public class MainSceneController {
         stage.show();
     }
 
-    public void btnModalWindowOnAction(ActionEvent event) {
+    Stage stage = null;
 
+    public void btnModalWindowOnAction(ActionEvent event) throws IOException {
+        if (stage != null) return;
+        stage = new Stage();
+        stage.setTitle("Modal Windows");
+        stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/scene/ModalScene.fxml"))));
+        stage.setOnCloseRequest(e -> stage = null);
+        stage.show();
     }
 
     public void btnAlertsOnAction(ActionEvent event) {

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.shape.Polygon?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane fx:id="root" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.dep13.fx.controller.SecondarySceneController">
+   <children>
+      <Polygon fill="DODGERBLUE" layoutX="362.0" layoutY="220.0" points="-315.0, 132.0, 191.0, 15.0, 84.0, -91.0" stroke="BLACK" strokeType="INSIDE" />
+      <Label alignment="CENTER" layoutX="267.0" layoutY="33.0" text="Secondary Scene" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <StackPane layoutX="201.0" layoutY="64.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0">
+         <children>
+            <Button fx:id="btnNavigateToMainScene" mnemonicParsing="false" onAction="#btnNavigateToMainSceneOnAction" text="Navigate to Main Scene">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+         </children>
+      </StackPane>
+   </children>
+</AnchorPane>

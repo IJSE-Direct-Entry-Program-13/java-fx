@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane fx:id="root" prefHeight="100.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.dep13.fx.controller.MainSceneController">
+   <children>
+      <StackPane layoutX="10.0" layoutY="52.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="52.0">
+         <children>
+            <Button fx:id="btnNavigateToSecondaryScene" mnemonicParsing="false" onAction="#btnNavigateToSecondarySceneOnAction" text="Navigate to Secondary Scene">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+         </children>
+      </StackPane>
+      <Label alignment="CENTER" layoutX="264.0" layoutY="43.0" text="FX Scene Navigation" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

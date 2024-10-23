@@ -21,7 +21,7 @@
             </Label>
             <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="40.0">
                <children>
-                  <ImageView fx:id="imgCustomer" fitHeight="75.0" fitWidth="100.0" onMouseEntered="#imgOnMouseEntered" onMouseExited="#imgOnMouseExited" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="imgCustomer" fitHeight="75.0" fitWidth="100.0" onMouseClicked="#imgOnMouseClicked" onMouseEntered="#imgOnMouseEntered" onMouseExited="#imgOnMouseExited" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../image/man.png" />
                      </image>
@@ -29,7 +29,7 @@
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </ImageView>
-                  <ImageView fx:id="imgOrder" fitHeight="75.0" fitWidth="100.0" onMouseEntered="#imgOnMouseEntered" onMouseExited="#imgOnMouseExited" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="imgOrder" fitHeight="75.0" fitWidth="100.0" onMouseClicked="#imgOnMouseClicked" onMouseEntered="#imgOnMouseEntered" onMouseExited="#imgOnMouseExited" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../image/shopping-cart.png" />
                      </image>
@@ -37,7 +37,7 @@
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </ImageView>
-                  <ImageView fx:id="imgStock" fitHeight="75.0" fitWidth="100.0" onMouseEntered="#imgOnMouseEntered" onMouseExited="#imgOnMouseExited" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="imgStock" fitHeight="75.0" fitWidth="100.0" onMouseClicked="#imgOnMouseClicked" onMouseEntered="#imgOnMouseEntered" onMouseExited="#imgOnMouseExited" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../image/ready-stock.png" />
                      </image>
@@ -45,7 +45,7 @@
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </ImageView>
-                  <ImageView fx:id="imgSettings" fitHeight="75.0" fitWidth="100.0" onMouseEntered="#imgOnMouseEntered" onMouseExited="#imgOnMouseExited" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="imgSettings" fitHeight="75.0" fitWidth="100.0" onMouseClicked="#imgOnMouseClicked" onMouseEntered="#imgOnMouseEntered" onMouseExited="#imgOnMouseExited" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../image/settings.png" />
                      </image>

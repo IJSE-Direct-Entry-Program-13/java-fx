@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" prefHeight="295.0" prefWidth="600.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.dep13.fx.controller.MainSceneController">
+   <children>
+      <VBox alignment="TOP_CENTER" layoutX="76.0" layoutY="167.0" spacing="30.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
+         <children>
+            <Label text="My App : Scene Navigation Exercise">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="40.0">
+               <children>
+                  <ImageView fx:id="imgCustomer" fitHeight="75.0" fitWidth="100.0" onMouseEntered="#imgOnMouseEntered" onMouseExited="#imgOnMouseExited" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/man.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+                  <ImageView fx:id="imgOrder" fitHeight="75.0" fitWidth="100.0" onMouseEntered="#imgOnMouseEntered" onMouseExited="#imgOnMouseExited" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/shopping-cart.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+                  <ImageView fx:id="imgStock" fitHeight="75.0" fitWidth="100.0" onMouseEntered="#imgOnMouseEntered" onMouseExited="#imgOnMouseExited" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/ready-stock.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+                  <ImageView fx:id="imgSettings" fitHeight="75.0" fitWidth="100.0" onMouseEntered="#imgOnMouseEntered" onMouseExited="#imgOnMouseExited" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/settings.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </HBox>
+            <Label fx:id="lblDescription" text="Select a menu to proceed">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label text="Copyright © 2024 DEP-13. All Rights Reserved.">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <padding>
+                  <Insets top="5.0" />
+               </padding>
+            </Label>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

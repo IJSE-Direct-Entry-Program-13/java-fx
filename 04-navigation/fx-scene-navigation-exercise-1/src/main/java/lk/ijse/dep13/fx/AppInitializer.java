@@ -5,6 +5,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
+import lk.ijse.dep13.fx.util.AppRouter;
 
 import java.io.IOException;
 
@@ -16,7 +17,7 @@ public class AppInitializer extends Application {
 
     @Override
     public void start(Stage primaryStage) throws IOException {
-        primaryStage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/scene/MainScene.fxml"))));
+        primaryStage.setScene(new Scene(AppRouter.getContainer(AppRouter.Routes.MAIN)));
         primaryStage.setResizable(false);
         primaryStage.setTitle("FX Scene Navigation Exercise");
         primaryStage.show();

@@ -11,6 +11,7 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import javafx.util.Duration;
+import lk.ijse.dep13.fx.util.AppRouter;
 
 import java.io.IOException;
 
@@ -22,13 +23,6 @@ public class MainSceneController {
     public ImageView imgStock;
     public Label lblDescription;
     public AnchorPane root;
-
-    public void initialize(){
-        FadeTransition ft = new FadeTransition(Duration.millis(500), root);
-        ft.setFromValue(0);
-        ft.setToValue(1);
-        ft.playFromStart();
-    }
 
     public void imgOnMouseEntered(MouseEvent event) {
         ScaleTransition ft = new ScaleTransition(Duration.millis(200), (ImageView) event.getTarget());
@@ -65,13 +59,13 @@ public class MainSceneController {
         Stage stage = (Stage) root.getScene().getWindow();
         ImageView menuItem = (ImageView) mouseEvent.getTarget();
         if (menuItem == imgCustomer){
-            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/scene/ManageCustomerScene.fxml"))));
+            stage.setScene(new Scene(AppRouter.getContainer(AppRouter.Routes.MANAGE_CUSTOMER)));
         }else if (menuItem == imgOrder){
-            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/scene/PlaceOrderScene.fxml"))));
+            stage.setScene(new Scene(AppRouter.getContainer(AppRouter.Routes.PLACE_ORDER)));
         }else if (menuItem == imgStock){
-            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/scene/ManageStockScene.fxml"))));
+            stage.setScene(new Scene(AppRouter.getContainer(AppRouter.Routes.MANAGE_STOCK)));
         }else{
-            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/scene/ConfigureSettingsScene.fxml"))));
+            stage.setScene(new Scene(AppRouter.getContainer(AppRouter.Routes.CONFIGURE_SETTINGS)));
         }
         stage.sizeToScene();
         stage.centerOnScreen();

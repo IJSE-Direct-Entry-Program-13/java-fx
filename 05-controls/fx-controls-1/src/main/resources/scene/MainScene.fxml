@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.media.MediaView?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" prefHeight="506.0" prefWidth="610.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.dep13.fx.controller.MainSceneController">
+   <children>
+      <Slider fx:id="sldrHorizontal" layoutX="60.0" layoutY="440.0" majorTickUnit="10.0" prefHeight="16.0" prefWidth="523.0" showTickLabels="true" showTickMarks="true" />
+      <Slider fx:id="sldrVertical" layoutX="33.0" layoutY="26.0" majorTickUnit="10.0" orientation="VERTICAL" prefHeight="401.0" prefWidth="16.0" showTickLabels="true" showTickMarks="true" />
+      <Label fx:id="lblVertical" layoutX="80.0" layoutY="29.0" text="Value: 0 ">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblHorizontal" layoutX="80.0" layoutY="398.0" text="Value: 0">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtInput" layoutX="377.0" layoutY="26.0" prefHeight="26.0" prefWidth="133.0" />
+      <Spinner fx:id="spnrInput" layoutX="199.0" layoutY="26.0" />
+      <MediaView fx:id="mdPreview" fitHeight="300.0" fitWidth="500.0" layoutX="80.0" layoutY="79.0" />
+      <Button fx:id="btnOpen" layoutX="523.0" layoutY="26.0" mnemonicParsing="false" onAction="#btnOpenOnAction" prefHeight="26.0" prefWidth="68.0" text="Open" />
+   </children>
+</AnchorPane>

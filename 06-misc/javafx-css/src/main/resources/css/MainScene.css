@@ -1,0 +1,75 @@
+/* This is a comment */
+
+/** {*/
+/*    -fx-font-size: 20px;*/
+/*    -fx-font-weight: lighter;*/
+/*    -fx-border-color: red green;*/
+/*    -fx-border-width: 4px;*/
+/*}*/
+
+/*#btn-1 {*/
+/*    -fx-background-color: yellow;*/
+/*}*/
+
+/*#btn1 {*/
+/*    -fx-background-color: red;*/
+/*    -fx-text-fill: white;*/
+/*}*/
+
+/*#btn2 {*/
+/*    -fx-background-color: green;*/
+/*    -fx-text-fill: white;*/
+/*}*/
+
+/*.my-class {*/
+/*    -fx-background-color: green;*/
+/*    -fx-text-fill: white;*/
+/*}*/
+
+/*.abc {*/
+/*    -fx-font-size: 30px;*/
+/*    -fx-font-weight: bold;*/
+/*    -fx-text-fill: red;*/
+/*}*/
+
+/*.button {*/
+/*    -fx-background-color: green;*/
+/*    -fx-text-fill: white;*/
+/*}*/
+
+/*.text-field {*/
+/*    -fx-background-color: white;*/
+/*    -fx-border-color: blue;*/
+/*}*/
+
+/*#root {*/
+/*    !*-fx-font-size: 20px;*!*/
+
+/*    !*-fx-text-fill: red;*!*/
+/*    !*-fx-border-color: red;*!*/
+/*    -fx-font-weight: bold;*/
+/*    -fx-font-size: 16px;*/
+/*    -fx-font-style: italic;*/
+/*}*/
+
+/*#vbx1 {*/
+/*    -fx-font-size: 30px;*/
+/*}*/
+
+/*#btn1 {*/
+/*    -fx-font-size: 20px;*/
+/*    -fx-font-style: normal;*/
+/*    -fx-background-color: green;*/
+/*    -fx-text-fill: white;*/
+/*}*/
+
+
+#root > #vbx1 > .btn {
+    -fx-text-fill: white;
+    -fx-background-color: red;
+}
+
+#vbx1 > #btn1.btn {
+    -fx-text-fill: black;
+    -fx-background-color: green;
+}

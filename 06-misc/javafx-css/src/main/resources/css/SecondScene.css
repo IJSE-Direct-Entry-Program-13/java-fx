@@ -1,0 +1,58 @@
+#container1 {
+    -fx-background-color: lightblue;
+}
+
+#container2 {
+    -fx-background-color: lightgreen;
+}
+
+#nestedContainer {
+    -fx-background-color: orange;
+}
+
+.anchor-pane {
+
+}
+
+.h-box {
+
+}
+
+/*#nestedContainer > .h-box > .button {*/
+/*    -fx-background-color: black;*/
+/*    -fx-text-fill: white;*/
+/*    -fx-background-radius: 20%;*/
+/*}*/
+
+/*#container1 > .button, #hbxButtons1 > .button {*/
+/*    -fx-background-color: black;*/
+/*    -fx-text-fill: white;*/
+/*    -fx-background-radius: 20%;*/
+/*}*/
+
+/*#container1 > .button:hover {*/
+/*    -fx-background-color: black;*/
+/*    -fx-text-fill: white;*/
+/*    -fx-background-radius: 20%;*/
+/*}*/
+
+/*#container1 > .button:focused {*/
+/*    -fx-background-color: black;*/
+/*    -fx-text-fill: white;*/
+/*    -fx-background-radius: 20%;*/
+/*}*/
+
+#container1 > .button:pressed {
+    -fx-background-color: black;
+    -fx-text-fill: white;
+    -fx-background-radius: 20%;
+}
+
+
+/*#hbxButtons1 > .button {*/
+/*    -fx-background-color: black;*/
+/*    -fx-text-fill: white;*/
+/*    -fx-background-radius: 20%;*/
+/*}*/
+
+

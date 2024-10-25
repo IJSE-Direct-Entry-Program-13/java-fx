@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+
+
+<AnchorPane fx:id="root" prefHeight="510.0" prefWidth="654.0" stylesheets="@../css/SecondScene.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.dep13.fx.controller.SecondSceneController">
+   <children>
+      <AnchorPane fx:id="container1" layoutX="14.0" layoutY="14.0" prefHeight="454.0" prefWidth="308.0" styleClass="anchor-pane" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="336.0" AnchorPane.topAnchor="100.0">
+         <children>
+            <Button layoutX="59.0" layoutY="29.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="60.0" text="Button" />
+            <Button layoutX="127.0" layoutY="29.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="60.0" text="Button" />
+            <Button layoutX="196.0" layoutY="29.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="60.0" text="Button" />
+            <AnchorPane fx:id="nestedContainer" layoutX="37.0" layoutY="121.0" prefHeight="200.0" prefWidth="237.0" styleClass="anchor-pane">
+               <children>
+                  <HBox fx:id="hbxButtons2" layoutX="19.0" layoutY="14.0" spacing="10.0" styleClass="h-box">
+                     <children>
+                        <Button mnemonicParsing="false" prefHeight="49.0" prefWidth="60.0" text="Button" />
+                        <Button mnemonicParsing="false" prefHeight="49.0" prefWidth="60.0" text="Button" />
+                        <Button mnemonicParsing="false" prefHeight="49.0" prefWidth="60.0" text="Button" />
+                     </children>
+                  </HBox>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="container2" layoutX="336.0" layoutY="14.0" prefHeight="454.0" prefWidth="308.0" styleClass="anchor-pane" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="336.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="100.0">
+         <children>
+            <Button layoutX="62.0" layoutY="30.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="60.0" text="Button" />
+            <Button layoutX="130.0" layoutY="30.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="60.0" text="Button" />
+            <Button layoutX="199.0" layoutY="30.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="60.0" text="Button" />
+         </children>
+      </AnchorPane>
+      <Button layoutX="66.0" layoutY="23.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="60.0" text="Button" />
+      <Button layoutX="134.0" layoutY="23.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="60.0" text="Button" />
+      <Button layoutX="203.0" layoutY="23.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="60.0" text="Button" />
+      <HBox fx:id="hbxButtons1" layoutX="392.0" layoutY="23.0" spacing="10.0" styleClass="h-box">
+         <children>
+            <Button mnemonicParsing="false" prefHeight="49.0" prefWidth="60.0" text="Button" />
+            <Button mnemonicParsing="false" prefHeight="49.0" prefWidth="60.0" text="Button" />
+            <Button mnemonicParsing="false" prefHeight="49.0" prefWidth="60.0" text="Button" />
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

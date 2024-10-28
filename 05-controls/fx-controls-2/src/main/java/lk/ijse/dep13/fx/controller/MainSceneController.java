@@ -1,8 +1,7 @@
 package lk.ijse.dep13.fx.controller;
 
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
-import javafx.geometry.Point3D;
-import javafx.scene.Cursor;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
@@ -16,6 +15,9 @@ public class MainSceneController {
     public Rectangle shpRectangle;
     public Label lbl2;
     public Label lbl1;
+    public Button btnAddClassA;
+    public Button btnRemoveClasses;
+    public Button btnAddClassB;
 
     public void btnFireSomethingOnAction(ActionEvent actionEvent) {
         lbl1.setStyle(lbl1.getStyle() + "-fx-border-color: white; -fx-font-size: 40px; -fx-background-color: black");
@@ -84,4 +86,22 @@ public class MainSceneController {
 //        System.out.println(txt.getCursor());
 //        System.out.println(shpRectangle.getCursor());
     }
+
+    public void btnAddClassAOnAction(ActionEvent actionEvent) {
+        ObservableList<String> styleClassList = lbl2.getStyleClass();
+        if (!styleClassList.contains("first-class")) styleClassList.add("first-class");
+        else styleClassList.remove("first-class");
+    }
+
+    public void btnAddClassBOnAction(ActionEvent actionEvent) {
+        ObservableList<String> styleClassList = lbl2.getStyleClass();
+        if (!styleClassList.contains("second-class")) styleClassList.add("second-class");
+        else styleClassList.remove("second-class");
+    }
+
+    public void btnRemoveClassesOnAction(ActionEvent actionEvent) {
+        lbl2.getStyleClass().clear();
+    }
+
+
 }

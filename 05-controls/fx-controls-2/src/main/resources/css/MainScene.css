@@ -1,0 +1,7 @@
+.first-class {
+    -fx-text-fill: red;
+}
+
+.second-class {
+    -fx-background-color: white;
+}

@@ -8,10 +8,9 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane fx:id="root" prefHeight="444.0" prefWidth="623.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.dep13.fx.controller.MainSceneController">
+<AnchorPane fx:id="root" prefHeight="444.0" prefWidth="623.0" stylesheets="@../css/MainScene.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.dep13.fx.controller.MainSceneController">
    <children>
-      <Button fx:id="btnFireSomething" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#btnFireSomethingOnAction" text="Fire Something" />
+      <Button fx:id="btnFireSomething" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#btnFireSomethingOnAction" prefHeight="26.0" prefWidth="131.0" text="Fire Something" />
       <AnchorPane layoutX="150.0" layoutY="14.0" style="-fx-background-color: yellow;">
          <children>
             <TextArea fx:id="txt" layoutX="57.0" layoutY="6.0" prefHeight="200.0" prefWidth="235.0" />
@@ -36,5 +35,8 @@
             </Label>
          </children>
       </StackPane>
+      <Button fx:id="btnAddClassA" layoutX="14.0" layoutY="46.0" mnemonicParsing="false" onAction="#btnAddClassAOnAction" prefHeight="26.0" prefWidth="131.0" text="Add Class A" />
+      <Button fx:id="btnRemoveClasses" layoutX="14.0" layoutY="111.0" mnemonicParsing="false" onAction="#btnRemoveClassesOnAction" prefHeight="26.0" prefWidth="131.0" text="Remove Classes" />
+      <Button fx:id="btnAddClassB" layoutX="14.0" layoutY="78.0" mnemonicParsing="false" onAction="#btnAddClassBOnAction" prefHeight="26.0" prefWidth="131.0" text="Add Class B" />
    </children>
 </AnchorPane>

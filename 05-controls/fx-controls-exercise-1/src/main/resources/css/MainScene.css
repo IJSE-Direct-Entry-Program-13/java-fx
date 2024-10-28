@@ -1,0 +1,29 @@
+* {
+    -fx-font-size: 16px;
+}
+
+.label, .button, .text-field {
+    -fx-font-weight: bold;
+}
+
+.text-field {
+    -fx-background-color: white;
+    -fx-border-color: lightgray;
+    -fx-background-radius: 5px;
+    -fx-border-radius: 5px;
+    -fx-prompt-text-fill: lightgray;
+}
+
+.text-field:hover, .text-field:focused {
+    -fx-border-color: #0096ff;
+    -fx-prompt-text-fill: lightgray;
+}
+
+.error {
+    -fx-border-color: red !important;
+}
+
+.success {
+    -fx-border-color: green !important;
+}
+

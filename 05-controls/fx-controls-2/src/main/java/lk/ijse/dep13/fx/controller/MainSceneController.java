@@ -5,8 +5,11 @@ import javafx.event.ActionEvent;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
+import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.shape.Rectangle;
+
+import java.util.Arrays;
 
 public class MainSceneController {
     public AnchorPane root;
@@ -18,6 +21,62 @@ public class MainSceneController {
     public Button btnAddClassA;
     public Button btnRemoveClasses;
     public Button btnAddClassB;
+    public Button btnReadData;
+    public Button btnDisable1;
+    public Button btnEnable1;
+    public Button btnDisable2;
+    public Button btnEnable2;
+    public AnchorPane container;
+    public TextField txtInput;
+    public Button btnCheckDisability;
+    public Label lblClickMe;
+
+    public void initialize(){
+        lbl1.setUserData(new int[]{10,20,30,40});
+        lblClickMe.setFocusTraversable(true);
+
+        txtInput.focusedProperty().addListener((observable, oldValue, newValue) -> {
+            System.out.println("Does container has the focus within? " + container.isFocusWithin());
+            System.out.println("Does container has the focus? " + container.isFocused());
+            System.out.println("Does txtInput has the focus? " + txtInput.isFocused());
+        });
+
+        container.focusWithinProperty().addListener((observable, oldValue, newValue) -> {
+            if (newValue) container.getStyleClass().add("focus-within");
+            else container.getStyleClass().remove("focus-within");
+        });
+
+//        lblClickMe.setVisible(false); // hide
+        lblClickMe.toFront();
+    }
+
+    public void btnCheckDisabilityOnAction(ActionEvent actionEvent) {
+        System.out.println("isDisable(): " + txtInput.isDisable());
+        System.out.println("isDisabled(): " +txtInput.isDisabled());
+    }
+
+    public void btnDisable1OnAction(ActionEvent actionEvent) {
+        txtInput.setDisable(true);
+    }
+
+    public void btnEnable1OnAction(ActionEvent actionEvent) {
+        txtInput.setDisable(false);
+    }
+
+    public void btnDisable2OnAction(ActionEvent actionEvent) {
+        container.setDisable(true);
+    }
+
+    public void btnEnable2OnAction(ActionEvent actionEvent) {
+        container.setDisable(false);
+    }
+
+
+
+    public void btnReadDataOnAction(ActionEvent actionEvent) {
+        int[] nums = (int[]) lbl1.getUserData();
+        System.out.println(Arrays.toString(nums));
+    }
 
     public void btnFireSomethingOnAction(ActionEvent actionEvent) {
         lbl1.setStyle(lbl1.getStyle() + "-fx-border-color: white; -fx-font-size: 40px; -fx-background-color: black");
@@ -102,6 +161,7 @@ public class MainSceneController {
     public void btnRemoveClassesOnAction(ActionEvent actionEvent) {
         lbl2.getStyleClass().clear();
     }
+
 
 
 }

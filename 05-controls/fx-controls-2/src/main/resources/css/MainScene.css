@@ -5,3 +5,36 @@
 .second-class {
     -fx-background-color: white;
 }
+
+#lblClickMe {
+    -fx-background-color: green;
+    -fx-text-fill: white;
+    -fx-background-radius: 10px;
+    -fx-alignment: center;
+    -fx-cursor: hand;
+}
+
+#lblClickMe:hover {
+    -fx-background-color: rgba(0, 128, 0, 0.92);
+}
+
+#lblClickMe:pressed {
+    -fx-background-color: rgb(4, 74, 4);
+}
+
+#lblClickMe:focused {
+    -fx-border-color: red;
+    -fx-border-radius: 10px;
+    -fx-border-width: 2px;
+}
+
+.focus-within {
+    -fx-border-color: red;
+    -fx-border-width: 4px;
+}
+
+/* This can't be used in production */
+/*#container:focus-within {*/
+/*    -fx-border-color: red;*/
+/*    -fx-border-width: 4px;*/
+/*}*/

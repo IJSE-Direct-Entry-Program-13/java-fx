@@ -3,23 +3,29 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="root" prefHeight="444.0" prefWidth="623.0" stylesheets="@../css/MainScene.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.dep13.fx.controller.MainSceneController">
+<AnchorPane fx:id="root" prefHeight="613.0" prefWidth="623.0" stylesheets="@../css/MainScene.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.dep13.fx.controller.MainSceneController">
    <children>
+      <Label fx:id="lblClickMe" focusTraversable="false" layoutX="389.0" layoutY="243.0" prefHeight="18.0" prefWidth="158.0" text="Click Me">
+         <font>
+            <Font name="System Bold" size="28.0" />
+         </font>
+      </Label>
       <Button fx:id="btnFireSomething" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#btnFireSomethingOnAction" prefHeight="26.0" prefWidth="131.0" text="Fire Something" />
       <AnchorPane layoutX="150.0" layoutY="14.0" style="-fx-background-color: yellow;">
          <children>
-            <TextArea fx:id="txt" layoutX="57.0" layoutY="6.0" prefHeight="200.0" prefWidth="235.0" />
+            <TextArea fx:id="txt" focusTraversable="false" layoutX="57.0" layoutY="6.0" prefHeight="200.0" prefWidth="235.0" />
          </children>
       </AnchorPane>
       <Rectangle fx:id="shpRectangle" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="200.0" layoutX="410.0" layoutY="15.0" stroke="BLACK" strokeType="INSIDE" width="200.0" />
       <AnchorPane layoutX="14.0" layoutY="228.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: lightblue;">
          <children>
-            <Label fx:id="lbl1" layoutX="88.0" layoutY="33.0" style="-fx-background-color: red; -fx-text-fill: white;" text="Label1">
+            <Label fx:id="lbl1" focusTraversable="false" layoutX="88.0" layoutY="33.0" style="-fx-background-color: red; -fx-text-fill: white;" text="Label1">
                <font>
                   <Font size="28.0" />
                </font>
@@ -28,7 +34,7 @@
       </AnchorPane>
       <StackPane layoutX="229.0" layoutY="227.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: lightgreen;">
          <children>
-            <Label fx:id="lbl2" text="Label2">
+            <Label fx:id="lbl2" focusTraversable="false" text="Label2">
                <font>
                   <Font size="28.0" />
                </font>
@@ -38,5 +44,25 @@
       <Button fx:id="btnAddClassA" layoutX="14.0" layoutY="46.0" mnemonicParsing="false" onAction="#btnAddClassAOnAction" prefHeight="26.0" prefWidth="131.0" text="Add Class A" />
       <Button fx:id="btnRemoveClasses" layoutX="14.0" layoutY="111.0" mnemonicParsing="false" onAction="#btnRemoveClassesOnAction" prefHeight="26.0" prefWidth="131.0" text="Remove Classes" />
       <Button fx:id="btnAddClassB" layoutX="14.0" layoutY="78.0" mnemonicParsing="false" onAction="#btnAddClassBOnAction" prefHeight="26.0" prefWidth="131.0" text="Add Class B" />
+      <Button fx:id="btnReadData" layoutX="14.0" layoutY="144.0" mnemonicParsing="false" onAction="#btnReadDataOnAction" prefHeight="26.0" prefWidth="131.0" text="Read Data" />
+      <Button fx:id="btnDisable1" focusTraversable="false" layoutX="14.0" layoutY="439.0" mnemonicParsing="false" onAction="#btnDisable1OnAction" text="Disable" />
+      <Button fx:id="btnEnable1" focusTraversable="false" layoutX="14.0" layoutY="474.0" mnemonicParsing="false" onAction="#btnEnable1OnAction" prefHeight="26.0" prefWidth="64.0" text="Enable" />
+      <Button fx:id="btnDisable2" focusTraversable="false" layoutX="14.0" layoutY="507.0" mnemonicParsing="false" onAction="#btnDisable2OnAction" prefHeight="26.0" prefWidth="64.0" text="Disable" />
+      <Button fx:id="btnEnable2" focusTraversable="false" layoutX="14.0" layoutY="541.0" mnemonicParsing="false" onAction="#btnEnable2OnAction" prefHeight="26.0" prefWidth="64.0" text="Enable" />
+      <AnchorPane fx:id="container" layoutX="89.0" layoutY="441.0" prefHeight="156.0" prefWidth="379.0" style="-fx-background-color: skyblue;">
+         <children>
+            <TextField fx:id="txtInput" layoutX="44.0" layoutY="14.0" prefHeight="62.0" prefWidth="292.0" text="Enter Something">
+               <font>
+                  <Font size="28.0" />
+               </font>
+            </TextField>
+            <TextField focusTraversable="false" layoutX="44.0" layoutY="86.0" prefHeight="62.0" prefWidth="292.0" text="Enter Something">
+               <font>
+                  <Font size="28.0" />
+               </font>
+            </TextField>
+         </children>
+      </AnchorPane>
+      <Button fx:id="btnCheckDisability" focusTraversable="false" layoutX="487.0" layoutY="439.0" mnemonicParsing="false" onAction="#btnCheckDisabilityOnAction" prefHeight="26.0" prefWidth="115.0" text="Check Disability" />
    </children>
 </AnchorPane>

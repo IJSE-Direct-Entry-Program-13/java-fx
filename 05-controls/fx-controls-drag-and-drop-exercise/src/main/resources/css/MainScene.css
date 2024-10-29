@@ -23,13 +23,19 @@
     -fx-padding: 10px;
     -fx-border-color: lightgray;
     -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+    -fx-border-width: 2px;
 }
 
 .vbox > *:hover {
     -fx-background-color: lightblue;
     -fx-background-radius: 5px;
+    -fx-border-color: black;
 }
 
 .source {
     -fx-background-color: lightblue;
+    -fx-border-width: 2px;
+    -fx-border-style: dashed;
+    -fx-border-color: black;
 }

@@ -22,7 +22,8 @@ public class MainSceneController {
             TextField txt = texts[i];
             txt.textProperty().addListener((observable, oldValue, newValue) -> {
                 txt.getStyleClass().removeAll("error", "success");
-                boolean valid = (txt == txtId) ? isValidId(txt.getText()): (txt == txtName) ? isValidName(txt.getText()): isValidNic(txt.getText());
+                boolean valid = (txt == txtId) ? isValidId(txt.getText()):
+                        (txt == txtName) ? isValidName(txt.getText()): isValidNic(txt.getText());
                 if (valid) txt.getStyleClass().add("success");
                 else txt.getStyleClass().add("error");
             });

@@ -7,5 +7,7 @@ public class MainSceneController {
     public AnchorPane container;
 
     public void containerOnMouseClicked(MouseEvent mouseEvent) {
+        System.out.println("Target: " + mouseEvent.getTarget());
+        System.out.println("Source: " + mouseEvent.getSource());
     }
 }

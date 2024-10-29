@@ -10,27 +10,27 @@
       <Label fx:id="lblTitle" layoutX="246.0" layoutY="40.0" text="Drag and Drop Exercise" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0" />
       <VBox fx:id="container1" layoutX="48.0" layoutY="67.0" prefHeight="200.0" prefWidth="206.0" spacing="10.0" styleClass="vbox" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="50.0">
          <children>
-            <StackPane>
+            <StackPane onDragDropped="#onDragDropped" onDragOver="#onDragOver">
                <children>
-                  <Label onDragDetected="#lblOnDragDetected" text="Drag Item 1" />
+                  <Label onDragDetected="#onDragDetected" onDragDone="#onDragDone" text="Drag Item 1" />
                </children>
             </StackPane>
-            <StackPane>
+            <StackPane onDragDropped="#onDragDropped" onDragOver="#onDragOver">
                <children>
-                  <Label onDragDetected="#lblOnDragDetected" text="Drag Item 2" />
+                  <Label onDragDetected="#onDragDetected" onDragDone="#onDragDone" text="Drag Item 2" />
                </children>
             </StackPane>
-            <StackPane>
+            <StackPane onDragDropped="#onDragDropped" onDragOver="#onDragOver">
                <children>
-                  <Label onDragDetected="#lblOnDragDetected" text="Drag Item 3" />
+                  <Label onDragDetected="#onDragDetected" onDragDone="#onDragDone" text="Drag Item 3" />
                </children>
             </StackPane>
-            <StackPane layoutX="16.0" layoutY="124.0">
+            <StackPane layoutX="16.0" layoutY="124.0" onDragDropped="#onDragDropped" onDragOver="#onDragOver">
                <children>
                   <Label />
                </children>
             </StackPane>
-            <StackPane layoutX="16.0" layoutY="178.0">
+            <StackPane layoutX="16.0" layoutY="178.0" onDragDropped="#onDragDropped" onDragOver="#onDragOver">
                <children>
                   <Label />
                </children>
@@ -39,27 +39,27 @@
       </VBox>
       <VBox fx:id="container2" layoutX="20.0" layoutY="60.0" prefHeight="200.0" prefWidth="206.0" spacing="10.0" styleClass="vbox" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="50.0">
          <children>
-            <StackPane>
+            <StackPane onDragDropped="#onDragDropped" onDragOver="#onDragOver">
                <children>
-                  <Label text="Drag Item 4" />
+                  <Label onDragDetected="#onDragDetected" onDragDone="#onDragDone" text="Drag Item 4" />
                </children>
             </StackPane>
-            <StackPane>
+            <StackPane onDragDropped="#onDragDropped" onDragOver="#onDragOver">
                <children>
-                  <Label text="Drag Item 5" />
+                  <Label onDragDetected="#onDragDetected" onDragDone="#onDragDone" text="Drag Item 5" />
                </children>
             </StackPane>
-            <StackPane layoutX="16.0" layoutY="70.0">
-               <children>
-                  <Label />
-               </children>
-            </StackPane>
-            <StackPane layoutX="16.0" layoutY="124.0">
+            <StackPane layoutX="16.0" layoutY="70.0" onDragDropped="#onDragDropped" onDragOver="#onDragOver">
                <children>
                   <Label />
                </children>
             </StackPane>
-            <StackPane layoutX="16.0" layoutY="178.0">
+            <StackPane layoutX="16.0" layoutY="124.0" onDragDropped="#onDragDropped" onDragOver="#onDragOver">
+               <children>
+                  <Label />
+               </children>
+            </StackPane>
+            <StackPane layoutX="16.0" layoutY="178.0" onDragDropped="#onDragDropped" onDragOver="#onDragOver">
                <children>
                   <Label />
                </children>

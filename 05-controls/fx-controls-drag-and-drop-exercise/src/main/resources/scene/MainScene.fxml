@@ -5,7 +5,6 @@
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
 
-
 <AnchorPane fx:id="root" prefHeight="333.0" prefWidth="600.0" stylesheets="@../css/MainScene.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.dep13.fx.controller.MainSceneController">
    <children>
       <Label fx:id="lblTitle" layoutX="246.0" layoutY="40.0" text="Drag and Drop Exercise" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0" />
@@ -13,17 +12,27 @@
          <children>
             <StackPane>
                <children>
-                  <Label text="Drag Item 1" />
+                  <Label onDragDetected="#lblOnDragDetected" text="Drag Item 1" />
                </children>
             </StackPane>
             <StackPane>
                <children>
-                  <Label text="Drag Item 2" />
+                  <Label onDragDetected="#lblOnDragDetected" text="Drag Item 2" />
                </children>
             </StackPane>
             <StackPane>
                <children>
-                  <Label text="Drag Item 3" />
+                  <Label onDragDetected="#lblOnDragDetected" text="Drag Item 3" />
+               </children>
+            </StackPane>
+            <StackPane layoutX="16.0" layoutY="124.0">
+               <children>
+                  <Label />
+               </children>
+            </StackPane>
+            <StackPane layoutX="16.0" layoutY="178.0">
+               <children>
+                  <Label />
                </children>
             </StackPane>
          </children>
@@ -38,6 +47,21 @@
             <StackPane>
                <children>
                   <Label text="Drag Item 5" />
+               </children>
+            </StackPane>
+            <StackPane layoutX="16.0" layoutY="70.0">
+               <children>
+                  <Label />
+               </children>
+            </StackPane>
+            <StackPane layoutX="16.0" layoutY="124.0">
+               <children>
+                  <Label />
+               </children>
+            </StackPane>
+            <StackPane layoutX="16.0" layoutY="178.0">
+               <children>
+                  <Label />
                </children>
             </StackPane>
          </children>

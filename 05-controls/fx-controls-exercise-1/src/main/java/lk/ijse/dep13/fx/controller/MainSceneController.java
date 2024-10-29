@@ -17,26 +17,37 @@ public class MainSceneController {
     public TextField txtNic;
 
     public void initialize() {
-        txtId.textProperty().addListener((observable, oldId, newId) -> {
-            txtId.getStyleClass().remove("error");
-            txtId.getStyleClass().remove("success");
-            if (isValidId(newId)) txtId.getStyleClass().add("success");
-            else txtId.getStyleClass().add("error");
-        });
+        TextField[] texts = {txtId, txtName, txtNic};
+        for (int i = 0; i < texts.length; i++) {
+            TextField txt = texts[i];
+            txt.textProperty().addListener((observable, oldValue, newValue) -> {
+                txt.getStyleClass().removeAll("error", "success");
+                boolean valid = (txt == txtId) ? isValidId(txt.getText()): (txt == txtName) ? isValidName(txt.getText()): isValidNic(txt.getText());
+                if (valid) txt.getStyleClass().add("success");
+                else txt.getStyleClass().add("error");
+            });
+        }
 
-        txtName.textProperty().addListener((observable, oldName, newName) -> {
-            txtName.getStyleClass().remove("error");
-            txtName.getStyleClass().remove("success");
-            if (isValidName(newName)) txtName.getStyleClass().add("success");
-            else txtName.getStyleClass().add("error");
-        });
-
-        txtNic.textProperty().addListener((observable, oldNic, newNic) -> {
-            txtNic.getStyleClass().remove("error");
-            txtNic.getStyleClass().remove("success");
-            if (isValidNic(newNic)) txtNic.getStyleClass().add("success");
-            else txtNic.getStyleClass().add("error");
-        });
+//        txtId.textProperty().addListener((observable, oldId, newId) -> {
+//            txtId.getStyleClass().remove("error");
+//            txtId.getStyleClass().remove("success");
+//            if (isValidId(newId)) txtId.getStyleClass().add("success");
+//            else txtId.getStyleClass().add("error");
+//        });
+//
+//        txtName.textProperty().addListener((observable, oldName, newName) -> {
+//            txtName.getStyleClass().remove("error");
+//            txtName.getStyleClass().remove("success");
+//            if (isValidName(newName)) txtName.getStyleClass().add("success");
+//            else txtName.getStyleClass().add("error");
+//        });
+//
+//        txtNic.textProperty().addListener((observable, oldNic, newNic) -> {
+//            txtNic.getStyleClass().remove("error");
+//            txtNic.getStyleClass().remove("success");
+//            if (isValidNic(newNic)) txtNic.getStyleClass().add("success");
+//            else txtNic.getStyleClass().add("error");
+//        });
     }
 
     private boolean isValidNic(String input){

@@ -16,23 +16,39 @@ public class MainSceneController {
     public Button btnSetFiles;
     public Button btnClear;
 
-    public void btnSetTextOnAction(ActionEvent actionEvent) {
+    public void btnReadTextOnAction(ActionEvent actionEvent) {
+        Clipboard systemClipboard = Clipboard.getSystemClipboard();
+        System.out.println("Found: " + systemClipboard.getString());
+        System.out.println("----------");
+        // This is a text
+    }
 
+    public void btnSetTextOnAction(ActionEvent actionEvent) {
+        Clipboard systemClipboard = Clipboard.getSystemClipboard();
+        ClipboardContent clipboardContent = new ClipboardContent();
+        clipboardContent.putString("This is awesome; I am from DEP");
+        systemClipboard.setContent(clipboardContent);
+        System.out.println("Clipboard updated");
     }
 
     public void btnSetFilesOnAction(ActionEvent actionEvent) {
-
+        Clipboard systemClipboard = Clipboard.getSystemClipboard();
+        ClipboardContent clipboardContent = new ClipboardContent();
+        ArrayList<String> filePaths = new ArrayList<>();
+        filePaths.add("/home/ranjith-suranga/Pictures/Wallpapers/53e6b233da3242a182d6ca059364e2d9.jpg");
+        filePaths.add("/home/ranjith-suranga/Pictures/Wallpapers/AwHEaL.jpg");
+        clipboardContent.putFilesByPath(filePaths);
+        systemClipboard.setContent(clipboardContent);
+        System.out.println("Clipboard updated");
     }
 
     public void btnReadFilesOnAction(ActionEvent actionEvent) {
-
-    }
-
-    public void btnReadTextOnAction(ActionEvent actionEvent) {
-
+        Clipboard systemClipboard = Clipboard.getSystemClipboard();
+        System.out.println("Found: " + systemClipboard.getFiles());
+        System.out.println("--------");
     }
 
     public void btnClearOnAction(ActionEvent actionEvent) {
-
+        Clipboard.getSystemClipboard().clear();
     }
 }

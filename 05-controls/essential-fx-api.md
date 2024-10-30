@@ -1,3 +1,4 @@
+```java
 getCursor(): Cursor
 setCursor(Cursor value): void
 
@@ -53,3 +54,10 @@ setVisible(boolean value): void
 
 toBack(): void
 toFront(): void
+
+startDragAndDrop(TransferMode... transferModes): Dragboard
+startFullDrag(): void
+
+isMouseTransparent(): boolean
+setMouseTransparent(boolean value): void
+```

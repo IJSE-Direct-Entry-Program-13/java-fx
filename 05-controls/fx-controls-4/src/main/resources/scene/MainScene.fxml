@@ -1,17 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.control.Slider?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.control.ToggleGroup?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.StackPane?>
-
+<?import javafx.scene.text.Font?>
 
 <AnchorPane fx:id="root" prefHeight="400.0" prefWidth="600.0" stylesheets="@../css/MainScene.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.dep13.fx.controller.MainSceneController">
    <children>
@@ -41,5 +46,25 @@
             </Button>
          </children>
       </HBox>
+      <DatePicker fx:id="dtPicker" layoutX="18.0" layoutY="187.0" onAction="#dtPickerOnAction" />
+      <ToggleButton fx:id="tglBold" layoutX="18.0" layoutY="227.0" mnemonicParsing="false" onAction="#tglBoldOnAction" text="B" />
+      <ToggleButton fx:id="tglItalic" layoutX="45.0" layoutY="227.0" mnemonicParsing="false" onAction="#tglItalicOnAction" prefHeight="26.0" prefWidth="27.0" text="I">
+         <font>
+            <Font name="System Italic" size="13.0" />
+         </font>
+      </ToggleButton>
+      <Label fx:id="lblPreview" layoutX="87.0" layoutY="231.0" text="PREVIE2W" />
+      <CheckBox fx:id="chkBold" layoutX="17.0" layoutY="263.0" mnemonicParsing="false" onAction="#chkBoldOnAction" text="Bold" />
+      <CheckBox fx:id="chkItalic" layoutX="17.0" layoutY="289.0" mnemonicParsing="false" onAction="#chkItalicOnAction" text="Italic" />
+      <Label fx:id="lblPreviewText" layoutX="87.0" layoutY="272.0" text="PREVIEW TEXT" />
+      <RadioButton fx:id="rdMale" layoutX="19.0" layoutY="320.0" mnemonicParsing="false" text="Male">
+         <toggleGroup>
+            <ToggleGroup fx:id="tglGender" />
+         </toggleGroup></RadioButton>
+      <RadioButton fx:id="rdFemale" layoutX="97.0" layoutY="320.0" mnemonicParsing="false" text="Female" toggleGroup="$tglGender" />
+      <Button fx:id="btnClearSelection" layoutX="14.0" layoutY="346.0" mnemonicParsing="false" onAction="#btnClearSelectionOnAction" prefHeight="26.0" prefWidth="131.0" text="Clear Selection" />
+      <Button fx:id="btnGetGender" layoutX="157.0" layoutY="346.0" mnemonicParsing="false" onAction="#btnGetGenderOnAction" prefHeight="26.0" prefWidth="100.0" text="Get Gender" />
+      <Button fx:id="btnSetMale" layoutX="267.0" layoutY="346.0" mnemonicParsing="false" onAction="#btnSetMaleOnAction" prefHeight="26.0" prefWidth="100.0" text="Set Male" />
+      <Button fx:id="btnSetFemale" layoutX="375.0" layoutY="346.0" mnemonicParsing="false" onAction="#btnSetFemaleOnAction" prefHeight="26.0" prefWidth="100.0" text="Set Female" />
    </children>
 </AnchorPane>

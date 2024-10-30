@@ -2,24 +2,69 @@
 
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.text.Font?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
 
-
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.dep13.fx.controller.MainSceneController">
+<AnchorPane fx:id="root" prefHeight="333.0" prefWidth="600.0" stylesheets="@../css/MainScene.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.dep13.fx.controller.MainSceneController">
    <children>
-      <AnchorPane fx:id="dropTarget" layoutX="262.0" layoutY="75.0" onDragDropped="#dropTargetOnDragDropped" onDragEntered="#dropTargetOnDragEntered" onDragExited="#dropTargetOnDragExited" onDragOver="#dropTargetOnDragOver" prefHeight="251.0" prefWidth="296.0" style="-fx-background-color: lightgreen;">
+      <Label fx:id="lblTitle" layoutX="246.0" layoutY="40.0" text="Drag and Drop Exercise" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0" />
+      <VBox fx:id="container1" layoutX="48.0" layoutY="67.0" prefHeight="200.0" prefWidth="206.0" spacing="10.0" styleClass="vbox" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="50.0">
          <children>
-            <Label layoutX="92.0" layoutY="111.0" opacity="0.1" text="DROP HERE">
-               <font>
-                  <Font name="System Bold" size="20.0" />
-               </font>
-            </Label>
+            <StackPane onDragDropped="#onDragDropped" onDragOver="#onDragOver">
+               <children>
+                  <Label onDragDetected="#onDragDetected" onDragDone="#onDragDone" text="Drag Item 1" />
+               </children>
+            </StackPane>
+            <StackPane onDragDropped="#onDragDropped" onDragOver="#onDragOver">
+               <children>
+                  <Label onDragDetected="#onDragDetected" onDragDone="#onDragDone" text="Drag Item 2" />
+               </children>
+            </StackPane>
+            <StackPane onDragDropped="#onDragDropped" onDragOver="#onDragOver">
+               <children>
+                  <Label onDragDetected="#onDragDetected" onDragDone="#onDragDone" text="Drag Item 3" />
+               </children>
+            </StackPane>
+            <StackPane layoutX="16.0" layoutY="124.0" onDragDropped="#onDragDropped" onDragOver="#onDragOver">
+               <children>
+                  <Label />
+               </children>
+            </StackPane>
+            <StackPane layoutX="16.0" layoutY="178.0" onDragDropped="#onDragDropped" onDragOver="#onDragOver">
+               <children>
+                  <Label />
+               </children>
+            </StackPane>
          </children>
-      </AnchorPane>
-      <Label fx:id="lblDragMe" layoutX="65.0" layoutY="180.0" onDragDetected="#lblDragMeOnDragDetected" onDragDone="#lblDragMeOnDragDone" text="DRAG ME">
-         <font>
-            <Font size="30.0" />
-         </font>
-      </Label>
+      </VBox>
+      <VBox fx:id="container2" layoutX="20.0" layoutY="60.0" prefHeight="200.0" prefWidth="206.0" spacing="10.0" styleClass="vbox" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="50.0">
+         <children>
+            <StackPane onDragDropped="#onDragDropped" onDragOver="#onDragOver">
+               <children>
+                  <Label onDragDetected="#onDragDetected" onDragDone="#onDragDone" text="Drag Item 4" />
+               </children>
+            </StackPane>
+            <StackPane onDragDropped="#onDragDropped" onDragOver="#onDragOver">
+               <children>
+                  <Label onDragDetected="#onDragDetected" onDragDone="#onDragDone" text="Drag Item 5" />
+               </children>
+            </StackPane>
+            <StackPane layoutX="16.0" layoutY="70.0" onDragDropped="#onDragDropped" onDragOver="#onDragOver">
+               <children>
+                  <Label />
+               </children>
+            </StackPane>
+            <StackPane layoutX="16.0" layoutY="124.0" onDragDropped="#onDragDropped" onDragOver="#onDragOver">
+               <children>
+                  <Label />
+               </children>
+            </StackPane>
+            <StackPane layoutX="16.0" layoutY="178.0" onDragDropped="#onDragDropped" onDragOver="#onDragOver">
+               <children>
+                  <Label />
+               </children>
+            </StackPane>
+         </children>
+      </VBox>
    </children>
 </AnchorPane>

@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>lk.ijse.dep13</groupId>
-    <artifactId>fx-controls-exercise-1</artifactId>
+    <artifactId>fx-scene-navigation-exercise</artifactId>
     <version>0.0.0</version>
 
     <properties>
@@ -17,13 +17,13 @@
     <dependencies>
         <dependency>
             <groupId>org.openjfx</groupId>
-            <artifactId>javafx-controls</artifactId>
+            <artifactId>javafx-fxml</artifactId>
             <version>23</version>
         </dependency>
 
         <dependency>
             <groupId>org.openjfx</groupId>
-            <artifactId>javafx-fxml</artifactId>
+            <artifactId>javafx-controls</artifactId>
             <version>23</version>
         </dependency>
     </dependencies>

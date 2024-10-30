@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ColorPicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" prefHeight="418.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.dep13.fx.controller.MainSceneController">
+   <children>
+      <Spinner fx:id="spnrInput" layoutX="14.0" layoutY="14.0" />
+      <Button fx:id="btnCustomize" layoutX="190.0" layoutY="14.0" mnemonicParsing="false" onAction="#btnCustomizeOnAction" text="Cutomize" />
+      <StackPane layoutX="239.0" layoutY="112.0" prefHeight="112.0" prefWidth="580.0" style="-fx-border-color: lightgray;" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0">
+         <children>
+            <Label fx:id="lblPreview" text="Preview">
+               <font>
+                  <Font size="33.0" />
+               </font>
+            </Label>
+         </children>
+      </StackPane>
+      <ColorPicker fx:id="clrBackground" layoutX="14.0" layoutY="67.0" onAction="#clrBackgroundOnAction" />
+      <ColorPicker fx:id="clrBorder" layoutX="169.0" layoutY="67.0" onAction="#clrBorderOnAction" />
+      <Spinner fx:id="spnrPadding" layoutX="328.0" layoutY="67.0" />
+      <Label layoutX="14.0" layoutY="49.0" text="Background Color" />
+      <Label layoutX="169.0" layoutY="49.0" text="Border Color" />
+      <Label layoutX="328.0" layoutY="49.0" text="Padding" />
+      <Label fx:id="lblImagePreview" layoutX="14.0" layoutY="241.0" style="-fx-border-color: lightgray;">
+         <graphic>
+            <ImageView fx:id="imgPreview" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+         </graphic>
+      </Label>
+      <Button fx:id="btn1" layoutX="236.0" layoutY="241.0" onAction="#btn1OnAction" text="_Button1" />
+      <Button fx:id="btn2" layoutX="320.0" layoutY="241.0" onAction="#btn2OnAction" text="Bu_tton2" />
+   </children>
+</AnchorPane>

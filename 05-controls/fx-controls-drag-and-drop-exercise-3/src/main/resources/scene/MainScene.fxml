@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="452.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.dep13.fx.controller.MainSceneController">
+   <children>
+      <StackPane fx:id="dropTarget" layoutX="126.0" layoutY="60.0" onDragDropped="#dropTargetOnDragDropped" onDragEntered="#dropTargetOnDragEntered" onDragExited="#dropTargetOnDragExited" onDragOver="#dropTargetOnDragOver" prefHeight="382.0" prefWidth="580.0" style="-fx-background-color: lightblue;" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="60.0">
+         <children>
+            <ImageView fx:id="imgDisplay" fitHeight="354.0" fitWidth="560.0" pickOnBounds="true" preserveRatio="true" />
+         </children>
+      </StackPane>
+      <Label fx:id="lblDragSource" layoutX="153.0" layoutY="14.0" onDragDetected="#lblDragSourceOnDragDetected" onDragDone="#lblDragSourceOnDragDone" text="Please Maawa Adan Yanna">
+         <font>
+            <Font name="System Bold" size="22.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

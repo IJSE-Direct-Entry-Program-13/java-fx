@@ -2,7 +2,7 @@
 
 ### Node API
 
-```java
+```
 getCursor(): Cursor
 setCursor(Cursor value): void
 

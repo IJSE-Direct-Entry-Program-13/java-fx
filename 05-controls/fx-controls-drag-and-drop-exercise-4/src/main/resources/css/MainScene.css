@@ -1,0 +1,23 @@
+#root {
+    -fx-font-size: 16px;
+}
+
+.text-field {
+    -fx-background-color: white;
+    -fx-border-color: lightgray;
+    -fx-prompt-text-fill: lightgray;
+}
+
+.text-field:focused {
+    -fx-border-color: #00a6ff;
+    -fx-prompt-text-fill: lightgray;
+}
+
+#lblErrorHint {
+    -fx-font-size: 0.8em;
+    -fx-text-fill: red;
+}
+
+.error {
+    -fx-border-color: red !important;
+}

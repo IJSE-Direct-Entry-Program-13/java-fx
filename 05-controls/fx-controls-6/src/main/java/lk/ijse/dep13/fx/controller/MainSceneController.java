@@ -2,9 +2,13 @@ package lk.ijse.dep13.fx.controller;
 
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
-import javafx.scene.control.Button;
-import javafx.scene.control.ListView;
-import javafx.scene.control.TextField;
+import javafx.scene.SnapshotParameters;
+import javafx.scene.control.*;
+import javafx.scene.image.WritableImage;
+import javafx.scene.input.*;
+import javafx.scene.paint.Color;
+import javafx.scene.text.Text;
+
 
 public class MainSceneController {
     public ListView<String> lst1;
@@ -67,5 +71,39 @@ public class MainSceneController {
 
     public void txt1OnAction(ActionEvent actionEvent) {
         btnAdd1.fire();
+    }
+
+    public void lstOnDragDetected(MouseEvent mouseEvent) {
+        ListView<String> listView = (ListView<String>) mouseEvent.getSource();
+        if (listView.getSelectionModel().isEmpty()) return;
+        /* Let's make sure cursor is within correct coordinates when dragging */
+        if (!mouseEvent.getTarget().toString().contains("null")){
+            Dragboard dragboard = listView.startDragAndDrop(TransferMode.MOVE);
+            ClipboardContent clipboardContent = new ClipboardContent();
+            clipboardContent.putString(listView.getSelectionModel().getSelectedItem());
+            SnapshotParameters snapshotParameters = new SnapshotParameters();
+            snapshotParameters.setFill(Color.AQUA);
+            Text text = new Text(clipboardContent.getString());
+            WritableImage snapshot = text.snapshot(snapshotParameters, null);
+            dragboard.setDragView(snapshot);
+            dragboard.setContent(clipboardContent);
+        }
+    }
+
+    ListView<String> dropTarget;
+
+    public void lstOnDragOver(DragEvent dragEvent) {
+        if (dragEvent.getDragboard().hasString()) dragEvent.acceptTransferModes(TransferMode.MOVE);
+        dropTarget = (ListView<String>) dragEvent.getSource();
+    }
+
+    public void lstOnDragDone(DragEvent dragEvent) {
+        Object acceptingObject = dragEvent.getAcceptingObject();
+        if (acceptingObject == null || dropTarget == null) return;
+        if (dragEvent.getSource() == dropTarget) return;
+        dropTarget.getItems().add(dragEvent.getDragboard().getString());
+        dropTarget = null;
+        ListView<String> dragSource = (ListView<String>) dragEvent.getSource();
+        dragSource.getItems().remove(dragSource.getSelectionModel().getSelectedIndex());
     }
 }

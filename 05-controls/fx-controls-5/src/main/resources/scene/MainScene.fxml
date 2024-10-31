@@ -1,14 +1,85 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.CheckMenuItem?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.RadioMenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.input.KeyCodeCombination?>
+<?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="scene.MainScene"
-            prefHeight="400.0" prefWidth="600.0" >
 
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.dep13.fx.controller.MainSceneController">
+   <children>
+      <MenuBar layoutX="225.0" layoutY="173.0" prefWidth="600.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <menus>
+            <Menu mnemonicParsing="false" text="File">
+               <items>
+                  <MenuItem fx:id="mnNewDocument" mnemonicParsing="false" onAction="#mnNewDocumentOnAction" text="New Document">
+                     <graphic>
+                        <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icon/add-file.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <accelerator>
+                        <KeyCodeCombination alt="UP" code="N" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator>
+                  </MenuItem>
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <RadioMenuItem fx:id="mnRadioMenuItem1" mnemonicParsing="false" text="Radio Menu Item 1">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="tglRadioMenuItem" />
+                     </toggleGroup>
+                  </RadioMenuItem>
+                  <RadioMenuItem fx:id="mnRadioMenuItem2" mnemonicParsing="false" text="Radio Menu Item 2" toggleGroup="$tglRadioMenuItem" />
+                  <RadioMenuItem fx:id="mnRadioMenuItem3" mnemonicParsing="false" text="Radio Menu Item 3" toggleGroup="$tglRadioMenuItem" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <CheckMenuItem fx:id="mnCheckMenuItem1" mnemonicParsing="false" onAction="#mnCheckMenuItem1OnAction" text="Bold" />
+                  <CheckMenuItem fx:id="mnCheckMenuItem2" mnemonicParsing="false" onAction="#mnCheckMenuItem2OnAction" text="Italic" />
+                  <CheckMenuItem fx:id="mnCheckMenuItem3" mnemonicParsing="false" onAction="#mnCheckMenuItem3OnAction" text="Large Font" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem fx:id="mnExit" mnemonicParsing="false" onAction="#mnExitOnAction" text="Exit" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Edit">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="New File">
+                     <graphic>
+                        <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icon/add-file.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <accelerator>
+                        <KeyCodeCombination alt="UP" code="A" control="DOWN" meta="UP" shift="DOWN" shortcut="UP" />
+                     </accelerator>
+                  </MenuItem>
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="View" />
+            <Menu mnemonicParsing="false" text="Help" />
+         </menus>
+         <padding>
+            <Insets bottom="5.0" top="5.0" />
+         </padding>
+      </MenuBar>
+      <TextArea fx:id="txtEditor" layoutX="8.0" layoutY="77.0" prefHeight="323.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="77.0" />
+      <ToolBar layoutX="28.0" layoutY="37.0" prefHeight="40.0" prefWidth="200.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="37.0">
+         <items>
+            <ToggleButton fx:id="tglBold" mnemonicParsing="false" prefWidth="30.0" text="B" />
+            <ToggleButton fx:id="tglItalic" mnemonicParsing="false" prefHeight="26.0" prefWidth="30.0" text="I" />
+         </items>
+      </ToolBar>
+   </children>
 </AnchorPane>

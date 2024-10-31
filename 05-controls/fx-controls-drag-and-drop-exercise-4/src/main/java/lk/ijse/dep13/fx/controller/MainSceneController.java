@@ -25,6 +25,7 @@ public class MainSceneController {
 
     public void initialize(){
         btnDelete.setDisable(true);
+        lblErrorHint.setVisible(false);
         lblContact.setLabelFor(txtContact);
         lstContacts.getItems().addAll("011-1234567", "022-1234567", "033-1234567");
 
@@ -40,6 +41,8 @@ public class MainSceneController {
 
     public void btnAddOnAction(ActionEvent event) {
         txtContact.getStyleClass().remove("error");
+        lblErrorHint.setVisible(false);
+
         if (txtContact.getText().isEmpty()) {
             txtContact.requestFocus();
         }else if (!isValidContact(txtContact.getText())){
@@ -88,23 +91,27 @@ public class MainSceneController {
     public void lstContactsOnDragDetected(MouseEvent mouseEvent) {
         if (lstContacts.getSelectionModel().getSelectedItem() == null) return;
         if (mouseEvent.getTarget().toString().contains("null")) return;
+
         Dragboard dragboard = lstContacts.startDragAndDrop(TransferMode.MOVE);
         ClipboardContent clipboardContent = new ClipboardContent();
         clipboardContent.putString(lstContacts.getSelectionModel().getSelectedItem());
         dragboard.setContent(clipboardContent);
+
         Text text = new Text(clipboardContent.getString());
         text.setFont(new Font(16));
         SnapshotParameters snapshotParameters = new SnapshotParameters();
         snapshotParameters.setFill(Color.AQUA);
         dragboard.setDragView(text.snapshot(snapshotParameters, null));
-        selectedIndex = lstContacts.getSelectionModel().getSelectedIndex();
+
+        //selectedIndex = lstContacts.getSelectionModel().getSelectedIndex();
     }
 
     int previousIndex = -1;
-    int selectedIndex = -1;
+    //int selectedIndex = -1;
 
     public void lstContactsOnDragOver(DragEvent dragEvent) {
         if(dragEvent.getGestureSource() != lstContacts) return;
+
         dragEvent.acceptTransferModes(TransferMode.MOVE);
         EventTarget target = dragEvent.getTarget();
         String targetContact;
@@ -112,7 +119,9 @@ public class MainSceneController {
         else if (target instanceof Text text) targetContact = text.getText();
         else return;
         if (targetContact == null) return;
+
         int index = lstContacts.getItems().indexOf(targetContact);
+
         if (index != previousIndex){
             if (previousIndex != -1) lstContacts.getItems().remove(previousIndex);
             lstContacts.getItems().add(index, "");

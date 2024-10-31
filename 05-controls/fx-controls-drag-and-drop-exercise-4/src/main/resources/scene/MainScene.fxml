@@ -18,6 +18,6 @@
       </HBox>
       <ListView fx:id="lstContacts" layoutX="25.0" layoutY="114.0" onDragDetected="#lstContactsOnDragDetected" onDragDropped="#lstContactsOnDragDropped" onDragExited="#lstContactsOnDragExited" onDragOver="#lstContactsOnDragOver" onKeyPressed="#lstContactsOnKeyPressed" prefHeight="256.0" prefWidth="200.0" />
       <Button fx:id="btnDelete" layoutX="235.0" layoutY="114.0" onAction="#btnDeleteOnAction" prefWidth="80.0" text="_DELETE" />
-      <Label fx:id="lblErrorHint" layoutX="25.0" layoutY="87.0" prefHeight="22.0" prefWidth="289.0" text="Error Hint" visible="false" />
+      <Label fx:id="lblErrorHint" layoutX="25.0" layoutY="87.0" prefHeight="22.0" prefWidth="289.0" text="Error Hint" />
    </children>
 </AnchorPane>

@@ -4,6 +4,7 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import lk.ijse.dep13.fx.util.AppRouter;
 
 import java.io.IOException;
 
@@ -15,7 +16,7 @@ public class AppInitializer extends Application {
 
     @Override
     public void start(Stage primaryStage) throws IOException {
-        primaryStage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/scene/LoginScene.fxml"))));
+        primaryStage.setScene(new Scene(AppRouter.getContainer(AppRouter.Routes.LOGIN).load()));
         primaryStage.setResizable(false);
         primaryStage.setTitle("Scene to Scene Communication");
         primaryStage.show();

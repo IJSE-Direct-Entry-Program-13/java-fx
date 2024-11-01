@@ -38,7 +38,15 @@ public class LoginSceneController {
                 if (usernames[i].equals(username)){
                     if (passwords[i].equals(password)){
                         Stage stage = new Stage();
-                        stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/scene/MainScene.fxml"))));
+
+                        // AnchorPane container = FXMLLoader.load(getClass().getResource("/scene/MainScene.fxml"));
+                        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/scene/MainScene.fxml"));
+                        AnchorPane container = fxmlLoader.load();
+                        stage.setScene(new Scene(container));
+
+                        MainSceneController controller = (MainSceneController) fxmlLoader.getController();
+                        controller.initData(fullNames[i], themes[i]);
+
                         stage.setTitle("Main App");
                         stage.show();
                         stage.centerOnScreen();

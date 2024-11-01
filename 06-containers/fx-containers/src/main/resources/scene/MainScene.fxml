@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Rectangle?>
+
+
+<AnchorPane fx:id="root" prefHeight="626.0" prefWidth="956.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.dep13.fx.controller.MainSceneController">
+   <children>
+      <Pane fx:id="container1" layoutX="14.0" layoutY="14.0" prefHeight="263.0" prefWidth="309.0" style="-fx-background-color: lightblue;" />
+      <Button fx:id="btnAddLabel" layoutX="14.0" layoutY="291.0" mnemonicParsing="false" onAction="#btnAddLabelOnAction" text="ADD LABEL" />
+      <Button fx:id="btnAddButton" layoutX="110.0" layoutY="291.0" mnemonicParsing="false" onAction="#btnAddButtonOnAction" text="ADD BUTTON" />
+      <Button fx:id="btnClearNodes" layoutX="221.0" layoutY="291.0" mnemonicParsing="false" onAction="#btnClearNodesOnAction" text="CLEAR NODES" />
+      <VBox layoutX="417.0" layoutY="18.0" spacing="10.0">
+         <children>
+            <HBox alignment="CENTER">
+               <children>
+                  <Label alignment="CENTER_RIGHT" prefWidth="75.0" text="ID: " />
+                  <TextField />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0">
+               <children>
+                  <Label alignment="CENTER_RIGHT" prefWidth="75.0" text="NAME: " />
+                  <TextField />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="36.0">
+               <children>
+                  <Label alignment="CENTER_RIGHT" prefWidth="75.0" text="ADDRESS: " />
+                  <TextField />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="62.0">
+               <children>
+                  <Label alignment="CENTER_RIGHT" prefWidth="75.0" text="CONTACT: " />
+                  <TextField />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <GridPane layoutX="422.0" layoutY="177.0">
+         <columnConstraints>
+            <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" minWidth="10.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="50.0" valignment="CENTER" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="50.0" valignment="CENTER" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="50.0" valignment="CENTER" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <TextField GridPane.columnIndex="1" />
+            <Label text="ID: " />
+            <TextField GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Label text="NAME: " GridPane.rowIndex="1" />
+            <Label text="CONTACT: " GridPane.rowIndex="2" />
+            <TextField GridPane.columnIndex="1" GridPane.rowIndex="2" />
+         </children>
+      </GridPane>
+      <BorderPane layoutX="14.0" layoutY="345.0" prefHeight="111.0" prefWidth="309.0">
+         <center>
+            <TextField BorderPane.alignment="CENTER" />
+         </center>
+         <top>
+            <Button mnemonicParsing="false" text="Button" BorderPane.alignment="CENTER" />
+         </top>
+      </BorderPane>
+      <StackPane layoutX="389.0" layoutY="345.0" prefHeight="203.0" prefWidth="272.0">
+         <children>
+            <Circle fx:id="circle" fill="#1fff35" radius="84.0" stroke="BLACK" strokeType="INSIDE" StackPane.alignment="CENTER" />
+            <Rectangle fx:id="rect" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="133.0" stroke="BLACK" strokeType="INSIDE" width="146.0" />
+            <Button fx:id="btn" mnemonicParsing="false" prefHeight="58.0" prefWidth="257.0" text="Button" />
+         </children>
+      </StackPane>
+      <Button fx:id="btnChangeDisplayOrder" layoutX="449.0" layoutY="558.0" mnemonicParsing="false" onAction="#btnChangeDisplayOrderOnAction" text="Change Display Order" />
+      <Accordion layoutX="668.0" layoutY="18.0" prefHeight="313.0" prefWidth="272.0">
+        <panes>
+          <TitledPane animated="false" text="Tab 1">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+            </content>
+          </TitledPane>
+          <TitledPane animated="false" text="Tab 2">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+            </content>
+          </TitledPane>
+          <TitledPane animated="false" text="Tab 3">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Button layoutX="105.0" layoutY="104.0" mnemonicParsing="false" text="Button" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </TitledPane>
+            <TitledPane animated="false" text="Tab 4">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+              </content>
+            </TitledPane>
+        </panes>
+      </Accordion>
+   </children>
+</AnchorPane>

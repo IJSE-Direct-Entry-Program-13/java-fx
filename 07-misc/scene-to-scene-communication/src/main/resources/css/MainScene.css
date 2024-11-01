@@ -1,0 +1,28 @@
+.dark *{
+    -fx-background-color: #606060;
+    -fx-text-fill: white;
+}
+
+.dark .button {
+    -fx-border-color: lightblue;
+    -fx-cursor: hand;
+}
+
+.dark .button:hover {
+    -fx-background-color: lightblue;
+    -fx-text-fill: black;
+}
+
+.light *{
+    -fx-background-color: white;
+    -fx-text-fill: black;
+}
+
+.light .button {
+    -fx-border-color: lightgray;
+    -fx-cursor: hand;
+}
+
+.light .button:hover {
+    -fx-background-color: lightgray;
+}
